@@ -1,0 +1,184 @@
+@import "ember-lxl/ember-lxl";
+@import "ember-flex-menu/ember-flex-menu";
+@import "affinity-engine";
+@import "affinity-engine/base";
+@import "affinity-engine/plugin/icon/font-awesome";
+@import "affinity-engine/styles/block";
+@import "affinity-engine/styles/caption";
+@import "affinity-engine/styles/coastal";
+@import "affinity-engine/styles/full";
+@import "affinity-engine/styles/paper";
+@import "affinity-engine/styles/transparent";
+@import "affinity-engine/menu-bar";
+@import "affinity-engine/stage";
+@import "affinity-engine/stage/direction/image";
+@import "affinity-engine/stage/direction/menu";
+@import "affinity-engine/stage/direction/text";
+
+html, body {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background: #121212;
+  overflow: hidden;
+}
+
+body > .ember-view {
+  position: relative;
+  max-height: 1000px;
+  max-width: 810px;
+  width: 100%;
+  height: 100%;
+  margin: auto;
+}
+
+.liquid-engine {
+  height: 100%;
+  width: 100%;
+
+  .liquid-child {
+    height: 100% !important;
+  }
+}
+
+.ember-sequencer {
+  color: #fff;
+}
+
+.true-center {
+  height: 100%;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+}
+
+.made-by-affinity {
+  cursor: pointer;
+  display: block;
+  width: 100%;
+  height: 100%;
+
+  img {
+    max-height: 68%;
+  }
+}
+
+.et-curtain, .ae-curtain, .ember-progress-bar {
+  height: 100%;
+}
+
+.engine-title {
+  position: absolute;
+  top: 38%;
+  font-size: 200%;
+  text-align: center;
+  width: 100%;
+  color: #fff;
+}
+
+.ember-progress-bar svg {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 10px;
+  margin-top: 1%;
+  color: #fff;
+}
+
+.lxl-body-bottom-pad {
+  height: 0 !important;
+  min-height: 0 !important;
+}
+
+.ae-stage-direction-text-container .lxl-word {
+  word-break: break-word;
+}
+
+.ae-stage-layer-stage-windows {
+  pointer-events: initial;
+}
+
+body > .ember-view, .ae-stage-scene-window {
+  display: flex;
+  height: 100%;
+}
+
+.ae-stage-scene-window-main, .affinity-engine {
+  position: relative;
+  height: 81%;
+  width: 81%;
+  min-width: 65px;
+  min-height: 65px;
+  margin: auto;
+  background-color: #121212;
+  box-shadow: inset 0 0 60px 12px #050505;
+  pointer-events: initial;
+
+  &:focus {
+    outline-width: 0;
+  }
+}
+
+.lxl-body {
+  line-height: 22px;
+}
+
+p.lxl-word {
+  margin-top: 0;
+}
+
+span.lxl-word {
+  margin-top: 5px;
+
+  span.lxl-word {
+    margin-top: 0;
+  }
+}
+
+.lxl-container .lxl-body a.lxl-tag-wrapper {
+  text-decoration: none;
+  border-bottom: thin dashed #fff;
+}
+
+.lxl-container .lxl-body a.lxl-tag-wrapper .lxl-letter, .lxl-container .lxl-body a.lxl-tag-wrapper .lxl-word {
+    text-decoration: none !important;
+}
+
+.ae-transparent, .ae-menu.ae-transparent, .ae-menu-bar.ae-transparent, .ae-text.ae-transparent .ae-text-caption {
+    color: #fff;
+}
+
+.lxl-container .lxl-body .decision-path a.lxl-tag-wrapper {
+  border-bottom-style: solid;
+}
+
+.lxl-container .lxl-body .back a.lxl-tag-wrapper {
+  margin-top: 30px;
+  border-bottom: none;
+
+  :before {
+    font-size: 75%;
+    content: '<';
+    margin-right: 3px;
+    vertical-align: middle;
+  }
+
+  &:hover {
+    border-bottom: thin solid #fff;
+  }
+}
+
+.decision {
+  font-weight: bold;
+  transition: transform 500ms;
+
+  &:hover {
+    transform: scale3d(1.05, 1.05, 1.05);
+  }
+}
